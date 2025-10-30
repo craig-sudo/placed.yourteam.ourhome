@@ -1,0 +1,9 @@
+export const COMPANY_NAME = "PLACED Teams";
+export const COMPANY_FULL_NAME = "PLACED Teams";
+export const COMPANY_TAGLINE = "Your team, our home.";
+export const AI_HELPER_NAME = "Lunai";
+export const COMPANY_ADDRESS = "123 Dashboard Way, Staging, CA 90210";
+export const COMPANY_PHONE = "555-PLACED-DASH";
+export const COMPANY_EMAIL = "support@placeddash.com";
+export const DEFAULT_QUOTE_EXPIRY_DAYS = 30;
+export const DEFAULT_TAX_RATE = 0.08;
