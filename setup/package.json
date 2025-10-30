@@ -1,0 +1,17 @@
+{
+  "name": "the-roofing-app-setup",
+  "version": "1.0.0",
+  "description": "Setup and deployment utilities for The Roofing App",
+  "scripts": {
+    "setup": "node setup/setup.js",
+    "setup:supabase": "node setup/supabase-check.js",
+    "setup:firebase": "node setup/firebase-check.js",
+    "deploy:staging": "npm run build && firebase use default && firebase deploy --only hosting",
+    "deploy:production": "npm run build && firebase use production && firebase deploy --only hosting",
+    "docker:build": "docker build -t paulroofs-app .",
+    "docker:run": "docker run --rm -p 8080:80 --name paulroofs-test paulroofs-app",
+    "docker:deploy": "docker stop paulroofs-app || true && docker rm paulroofs-app || true && docker run -d -p 80:80 --name paulroofs-app --restart unless-stopped paulroofs-app",
+    "validate:env": "node setup/validate-env.js",
+    "validate:build": "npm run build && echo '✅ Build validation passed'"
+  }
+}
